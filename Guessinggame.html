@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="Guessinggame.css">
+    <meta charset="utf-8">
+    <title>NumberGuessingGame</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Guess The Number</h1>
+        <p>We have selected a number between 1 - 10.See if you can guess it.</p>
+        <div class="form">
+            <label for="guessField">Enter a guess: </label>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" value = "Submit guess"
+            class="guessSubmit" id="guessSubmit">
+        </div>
+        
+        <script type = "text/javascript">
+            //1. add the script tag
+            //2. create a varible called y
+            //3. create a varible to keep track of how many guessess you take
+            //4. add this code:
+            //5. create a varible to hold the numbers you guessed
+            //6. use conditional statements to do the logic
+            //7. Close the script tag
+            var y = Math.floor(Math.random()* 10 + 1);
+            var guess = 1;
+            document.getElementById("guessSubmit").onclick = function(){
+                var x = document.getElementById("guessField").value;
+
+              // if the user guessed right then it should say you got it right
+
+              // if the user guessed low, then it should say you guessed low
+
+              // if the user guessed high, then it should say you guessed high.
+
+              if(x > y){
+                alert("Your answer is too high \n " + guess + " GUESSES ");
+                guess = guess + 1;
+              }
+              if (x < y) {
+                alert("Your answer is too low \n " + guess + " GUESSES ");
+                guess = guess + 1;
+              }
+              if(x == y)
+              {
+                alert("CONGRATULATIONS!!!!!!!!!!! YOU GUESSED IT RIGHT IN \n"
+                + guess + " GUESS ");
+              } 
+            } 
+        </script>
+    </body>
+</html>
